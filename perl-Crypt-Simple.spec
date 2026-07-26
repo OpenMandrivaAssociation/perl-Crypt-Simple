@@ -1,15 +1,13 @@
 %define upstream_name    Crypt-Simple
-%define upstream_version 0.06
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	7
+Version:	0.06
+Release:	8
 
 Summary:	Encrypt stuff simply
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Crypt-Simple
-Source0:	https://cpan.metacpan.org/authors/id/K/KA/KASEI/Crypt-Simple-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/K/KA/KASEI/Crypt-Simple-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -33,7 +31,7 @@ page, or bounce around the Net. The data you encrypt can be as simple or as
 complicated as you like.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
